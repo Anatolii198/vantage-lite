@@ -1,0 +1,18 @@
+Vantage — photo credits
+============================================================
+
+The photograph in this folder comes from Unsplash and is used under
+the Unsplash License: free for commercial and non-commercial use, no
+permission or attribution required. https://unsplash.com/license
+
+The credit below is given because it is decent practice, not because
+the licence demands it. If you replace the photo with your own,
+delete its line here.
+
+⚠️ The person in this photograph is not you and has signed no model
+release. It is a placeholder. Replace it with a picture of yourself
+before the site goes live — a personal landing page with a stranger
+on it is worse than one with no photograph at all.
+
+portrait.jpg     At the desk, screen out of frame
+                 https://unsplash.com/photos/a-man-sitting-at-a-desk-in-front-of-a-computer-InWUkRKyNbI by @alex_hfmn54

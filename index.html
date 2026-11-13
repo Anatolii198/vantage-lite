@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vantage Lite — paid media specialist</title>
+<meta name="description" content="One-page site for a paid media specialist: results with live charts, services and pricing. No framework, no build step, no external requests.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0d10">
+
+<!-- Open Graph. Replace the URL and the image with your own before launch;
+     og:image wants 1200×630 and an absolute address, not a relative one. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paid media specialist">
+<meta property="og:description" content="Meta, Google and TikTok ads for e-commerce and B2B.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0d10'/%3E%3Cpath d='M7 9l9 15 9-15' fill='none' stroke='%23d6f432' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Theme before the first paint. Without these four lines a visitor who
+     prefers light sees one dark frame while the page loads. -->
+<script>
+  try {
+    var saved = localStorage.getItem('vantage-theme');
+    document.documentElement.dataset.theme =
+      saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  } catch (e) { /* private mode: keep the dark default */ }
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="misc.skip">Skip to content</a>
+
+<!-- ======================================================= header ===== -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" data-mark>MD</span>
+      <span class="brand-txt">
+        <b data-name>—</b>
+        <i data-i18n="hero.eyebrow">—</i>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#work" data-i18n="nav.work">Results</a>
+      <a href="#services" data-i18n="nav.services">What I do</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+    </nav>
+
+    <div class="tools">
+      <!-- Language. A plain <select> on purpose: it is the one control every
+           phone already knows how to open. -->
+      <label class="sr" for="lang" data-i18n="nav.lang">Language</label>
+      <select id="lang" class="lang"></select>
+
+      <button class="icon" id="theme" type="button" aria-pressed="false">
+        <span class="sr" data-i18n="nav.theme">Light or dark</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="i-sun"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.4 5.4l1.8 1.8M16.8 16.8l1.8 1.8M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="i-moon"><path d="M20 14.2A8.4 8.4 0 019.8 4 8.4 8.4 0 1020 14.2z"/></svg>
+      </button>
+
+      <!-- Every call to action in this version is one mail link. The address
+           and the subject line are filled in by js/main.js from js/config.js,
+           so there is no address written into the markup to go stale. -->
+      <a class="btn btn-go btn-sm" href="#" data-mail data-i18n="nav.book">Email me</a>
+
+      <button class="icon burger" id="burger" type="button" aria-expanded="false" aria-controls="nav">
+        <span class="sr" data-i18n="nav.menu">Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========================================================= hero ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-txt">
+      <p class="eyebrow" data-i18n="hero.eyebrow">—</p>
+      <h1 class="h1" data-i18n="hero.h">—</h1>
+      <p class="lead" data-i18n="hero.p">—</p>
+      <div class="hero-cta">
+        <a class="btn btn-go" href="#" data-mail data-i18n="hero.cta">Write to me</a>
+        <a class="btn btn-ghost" href="#work" data-i18n="hero.cta2">See the results</a>
+      </div>
+      <p class="fine" data-i18n="hero.note">—</p>
+    </div>
+
+    <!-- Three figures. Filled from CFG.figures so the owner edits one file. -->
+    <ul class="figs" data-figs></ul>
+  </div>
+
+  <!-- Platforms. Plain text, never a logo: the marks are trademarks. -->
+  <div class="wrap">
+    <div class="plat">
+      <h2 class="plat-h" data-i18n="plat.h">—</h2>
+      <ul class="plat-list" data-platforms></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== results ==== -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="eyebrow" data-i18n="case.eyebrow">Results</p>
+      <h2 class="h2" data-i18n="case.h">—</h2>
+      <p class="sec-p" data-i18n="case.p">—</p>
+    </header>
+    <div class="cases" data-cases></div>
+  </div>
+</section>
+
+<!-- ======================================================= services ==== -->
+<section class="sec sec-alt" id="services">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="eyebrow" data-i18n="svc.eyebrow">What I do</p>
+      <h2 class="h2" data-i18n="svc.h">—</h2>
+      <p class="sec-p" data-i18n="svc.p">—</p>
+    </header>
+    <ul class="svcs" data-services></ul>
+  </div>
+</section>
+
+<!-- ======================================================== process ==== -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="eyebrow" data-i18n="step.eyebrow">How it runs</p>
+      <h2 class="h2" data-i18n="step.h">—</h2>
+    </header>
+    <ol class="steps" data-steps></ol>
+  </div>
+</section>
+
+<!-- ========================================================== about ==== -->
+<section class="sec sec-alt" id="about">
+  <div class="wrap about">
+    <div class="about-img">
+      <div class="shot" data-photo></div>
+    </div>
+    <div class="about-txt">
+      <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+      <h2 class="h2" data-i18n="about.h">—</h2>
+      <p class="lead" data-i18n="about.p1">—</p>
+      <p data-i18n="about.p2">—</p>
+      <p class="since" data-since>—</p>
+      <h3 class="certs-h" data-i18n="about.certs">Certifications</h3>
+      <ul class="certs" data-certs></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ cta ==== -->
+<section class="band">
+  <div class="wrap band-in">
+    <div>
+      <h2 class="h2" data-i18n="cta.h">—</h2>
+      <p class="sec-p" data-i18n="cta.p">—</p>
+    </div>
+    <a class="btn btn-go btn-lg" href="#" data-mail data-i18n="nav.book">Email me</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================================================== footer ===== -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-me">
+      <b data-name>—</b>
+      <span data-i18n="foot.role">—</span>
+    </div>
+    <ul class="foot-links" data-contacts></ul>
+    <div class="foot-end">
+      <p class="fine">© <span data-year>—</span> <span data-name>—</span>. <span data-i18n="foot.rights">All rights reserved.</span></p>
+      <p class="fine" data-i18n="foot.note">—</p>
+      <a class="fine up" href="#top" data-i18n="foot.top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/offer.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
